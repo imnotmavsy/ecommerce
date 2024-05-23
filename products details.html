@@ -1,0 +1,77 @@
+<html lang ="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BAPERS MANILA</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!----javascript link------->
+<script src = "products.js"></script>
+
+<body style= "background-color:white">
+
+<div class="header">
+<div class="container">
+<div class="navbar">
+		<div class="logo">
+			<a href="index.html"><img src="./PICS/ungoy.png" width="50px"></a>
+		</div>
+		
+		<nav> 
+			<ul>
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="Products.html">Products</a></li> 
+				<li><a href="about.html">About us</a></li> 
+				<li><a href="contact.html">Contact</a></li> 
+				<li><a href="account.html">Information</a></li> 
+			</ul>
+		</nav>
+		<a href="cart.html"><img src="./PICS/cart.jpg" width="40px" height="35px"></a>
+	</div>	
+</div>
+</div>
+	
+
+<!------------single product details------------->
+
+<div class="small-container single-product" id= "dynamic-product">
+	<div class="row">
+		<div class="col-2">
+			 <img id="product-image" src="" width="100%">
+          </div>
+          <div class="col-2">
+            <h1 id="product-name"></h1>
+            <h4 id="product-price">₱ 00000.00</h4>
+            <input type="number" id="quantity-input" value="1">
+            <a href="cart.html" id="add-to-cart-button" class="btn">Add to Cart</a>
+            <a href="Products.html" class="btn">Back to Products</a>
+        </div>
+       </div>
+    </div>
+<!--------js for product gallery--------->
+
+<script>
+	var ProductImg = document.getElementById("ProductImg");
+	var SmallImg = document.getElementsByClassName("small-img");
+	
+		SmallImg[0].onclick = function()
+		{
+			ProductImg.src = SmallImg[0].src;
+		}
+		SmallImg[1].onclick = function()
+		{
+			ProductImg.src = SmallImg[1].src;
+		}
+		SmallImg[2].onclick = function()
+		{
+			ProductImg.src = SmallImg[2].src;
+		}
+		SmallImg[3].onclick = function()
+		{
+			ProductImg.src = SmallImg[3].src;
+		}
+		
+</script>
+</body>
+</html>

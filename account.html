@@ -1,0 +1,84 @@
+<html lang ="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BAPERS MANILA</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+</head>
+<body style= "background-color:white">
+
+<div class="header">
+<div class="container">
+<div class="navbar">
+		<div class="logo">
+			<a href="index.html"><img src="./PICS/ungoy.png" width="50px"></a>
+		</div>
+		
+		<nav> 
+			<ul>
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="Products.html">Products</a></li> 
+				<li><a href="about.html">About us</a></li> 
+				<li><a href="contact.html">Contact</a></li> 
+				<li><a href="account.html">Information</a></li> 	
+			</ul>
+		</nav>
+		<a href="cart.html"><img src="./PICS/cart.jpg" width="40px" height="35px"></a>
+	</div>	
+</div>
+</div>
+
+<!---------------account-page----------->
+<div class="account-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+				<img src="./PICS/ungoy.png" width="100%">
+			</div>
+			<div class="col-2">
+				<div class="form-container">
+				<div class="form-btn">
+					<span onclick="login()">Login</span>
+					<span onclick="register()">Register</span>
+					<hr id="Indicator">
+				</div>
+				<form id="LoginForm">
+					<input type="text" placeholder="Username">
+					<input type="password" placeholder="Password">
+					<button type="submit" class="btn"><a href="index.html">Login</a></button>
+					<a href="" style="color:black">Forgot password</a>
+				</form>
+				
+				<form id="RegForm">
+					<input type="text" placeholder="Username">
+					<input type="email" placeholder="Email">
+					<input type="password" placeholder="Password">
+					<button type="submit" class="btn"><a href="index.html">Register</a></button>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!---------js for toggle form--------->
+<script>
+var LoginForm = document.getElementById("LoginForm");
+var RegForm = document.getElementById("RegForm");
+var Indicator = document.getElementById("Indicator");
+
+	function register(){
+		RegForm.style.transform = "translateX(0px)";
+		LoginForm.style.transform = "translateX(0px)";
+		Indicator.style.transform = "translateX(100px)";
+	}
+	function login(){
+		RegForm.style.transform = "translateX(300px)";
+		LoginForm.style.transform = "translateX(300px)";
+		Indicator.style.transform = "translateX(0px)";
+	}
+</script>
+
+</body>
+</html>
